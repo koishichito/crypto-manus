@@ -1,0 +1,16 @@
+# --- ボリンジャーバンド・ミーンリバージョン -------------------
+datasource:
+  exchange: binance
+  symbol: SOL/USDT
+  timeframe: 15m
+  since: "2024-07-01"
+
+signal:
+  type: bollinger_mr
+  params:
+    period: 20
+    dev: 2
+
+execution: {}
+backtest:
+  initial_capital: 10000

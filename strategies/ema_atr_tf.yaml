@@ -1,0 +1,17 @@
+# --- EMA クロス ＋ ATR トレンドフォロー -----------------------
+datasource:
+  exchange: binance
+  symbol: ETH/USDT
+  timeframe: 5m
+  since: "2024-07-01"
+
+signal:
+  type: ema_atr_tf
+  params:
+    fast: 20
+    slow: 60
+    atr_mult: 2.5
+
+execution: {}
+backtest:
+  initial_capital: 10000

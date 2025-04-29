@@ -1,0 +1,17 @@
+# --- VWAP 乖離スキャルピング ---------------------------------
+datasource:
+  exchange: binance
+  symbol: BTC/USDT
+  timeframe: 1m
+  since: "2024-10-01"
+
+signal:
+  type: vwap_deviation
+  params:
+    threshold: 0.25        # エントリー閾値 (%)
+execution:
+  take_profit: 0.15
+  stop_loss: 0.10
+
+backtest:
+  initial_capital: 10000
